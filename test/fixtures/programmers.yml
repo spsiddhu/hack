@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Hacker_name: MyString
+  Skillset: MyString
+  City: MyString
+  email: MyString
+
+two:
+  Hacker_name: MyString
+  Skillset: MyString
+  City: MyString
+  email: MyString

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hacker</title>
+  <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container"><%= yield %></div>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container"><a class="brand" href="/">Meet and Hack!</a><ul class="nav">
+              <li class="active"><a href="/programmers">Hackers</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">Host a hackathon 2013</div>
+</footer>
+</body>
+</html>

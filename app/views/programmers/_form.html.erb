@@ -1,0 +1,33 @@
+<%= form_for(@programmer) do |f| %>
+  <% if @programmer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@programmer.errors.count, "error") %> prohibited this programmer from being saved:</h2>
+
+      <ul>
+      <% @programmer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Hacker_name %><br />
+    <%= f.text_field :Hacker_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Skillset %><br />
+    <%= f.text_field :Skillset %>
+  </div>
+  <div class="field">
+    <%= f.label :City %><br />
+    <%= f.text_field :City %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

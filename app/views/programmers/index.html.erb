@@ -1,0 +1,32 @@
+<h1>Listing programmers</h1>
+
+<table>
+  <tr>
+    <th>Hacker name</th>
+    <th>Skillset</th>
+    <th>City</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @programmers.each do |programmer| %>
+  <tr>
+    <td><%= programmer.Hacker_name %></td>
+    <td> <%= programmer.Skillset %> </td>
+    <td> <%= programmer.City %> </td>
+    <td> <%= programmer.email %> </td>
+    <td> <%= link_to 'Show', programmer %> </td>
+    <td> <%= link_to 'Edit', edit_programmer_path(programmer) %> </td>
+    <td> <%= link_to 'Destroy', programmer, confirm: 'Are you sure?', method: :delete %> </td>
+  </tr>
+<% end %>
+</table>
+<br/> 
+<%= gmaps4rails(@pins) %> 
+<%= yield :scripts %>
+
+<br />
+
+<%= link_to 'New Programmer', new_programmer_path %>

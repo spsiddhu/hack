@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hacker name:</b>
+  <%= @programmer.Hacker_name %>
+</p>
+
+<p>
+  <b>Skillset:</b>
+  <%= @programmer.Skillset %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @programmer.City %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @programmer.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_programmer_path(@programmer) %> |
+<%= link_to 'Back', programmers_path %>
