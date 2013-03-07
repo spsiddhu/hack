@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	#user_nav
+	{color:blue;
+
+	}
+	</style>
   <title>Hacker</title>
   <link rel="stylesheet" href="http://railsgirls.com/assets/bootstrap.css">
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -8,18 +14,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<h3>
 <div class="container"><%= yield %></div>
+<div id="user_nav">
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+</div>
+</h3>
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container"><a class="brand" href="/">Meet and Hack!</a><ul class="nav">
               <li class="active"><a href="/programmers">Hackers</a></li>
+			
+
             </ul>
         </div>
     </div>
 </div>
 <footer>
-    <div class="container">Host a hackathon 2013</div>
+    <div class="container">Host a hackthaon 2013</div>
 </footer>
 </body>
 </html>

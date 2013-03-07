@@ -1,6 +1,13 @@
 Hacker::Application.routes.draw do
+  devise_for :users
+
   resources :programmers
-root :to => redirect("/programmers")
+  root :to => redirect("/programmers")
+namespace :admin do  
+      resources :users, only: :show do
+         post :generate_new_password_email
+      end
+   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

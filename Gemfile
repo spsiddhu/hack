@@ -13,6 +13,8 @@ end
 group :production do
   gem 'pg'
 end
+gem 'heroku'
+gem 'devise'
 
 
 # Gems used only for assets and not required
